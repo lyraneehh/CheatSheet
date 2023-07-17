@@ -5,6 +5,8 @@ nmap -sP x.x.x.1/24
 nmap -sn x.x.x.1/24
 nmap -p 389 -T4 -A -v --script ldap-rootdse nnn.nnn.nnn.nnn/nn
 nmap --script ftp-brute -p 21 <host>
+Nmap -Pn -p 3389 target > rdp  // grep -B 5 open rdp
+Nmap -Pn -p 3306 target > mysql // grep -B 5 open mysql
 
 
 ==== Crack SMB credentials ====
@@ -54,6 +56,8 @@ Nessus runs on https[:]//localhost[:]8834
 
 ==== WIRESHARK ====
 
+
+
 To find DOS (SYN and ACK) : 
 •	tcp.flags.syn == 1 , tcp.flags.syn == 1 and tcp.flags.ack == 0
 
@@ -63,6 +67,8 @@ To find Wireshark DOS attack:
 View Flood attack on victim via Wireshark 
 •	| use filter tcp.port=21
 
+
+https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
 
 ====== SQL ======
 
@@ -96,7 +102,7 @@ Execute cmd from login
 
 === PASSWORD CRACKING ===
 
-
+john --single --format=md5crypt crack.txt
 
 === WIFI ENCYRPTION CRACKING ===
 
@@ -105,4 +111,32 @@ aircrack-ng -w rockyou.txt capture-01.cap
 
 === VERACRYPT ===
 
+
+=== CUSTOM WORDLIST ===
+
+=== MOBILE ===
+
+ADB
+To Install ADB
+apt-get update
+sudo apt-get install adb -y
+adb devices -l
+Connection Establish Steps
+adb connect x.x.x.x:5555
+adb devices -l
+adb shell  
+To navigate
+pwd
+ls
+cd Download
+ls
+cd sdcard
+Download a File from Android using ADB tool
+adb pull /sdcard/log.txt C:\Users\admin\Desktop\log.txt 
+adb pull sdcard/log.txt /home/mmurphy/Desktop
+
+== resources ==
+
+https://github.com/nirangadh/ceh-practical/blob/main/module03-Scanning-Networks.txt
+https://github.com/Samson-DVS/CEH-Practical-Notes/tree/main
 
