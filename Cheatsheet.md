@@ -1,13 +1,17 @@
 # Scanning
 
+## netdiscover
 ```console
-*netdiscover -r x.x.x.1/24
-*nmap -sP x.x.x.1/24                 
-*nmap -sn x.x.x.1/24
-*nmap -p 389 -T4 -A -v --script ldap-rootdse nnn.nnn.nnn.nnn/nn
-*nmap --script ftp-brute -p 21 <host>
-*Nmap -Pn -p 3389 target > rdp  // grep -B 5 open rdp
-*Nmap -Pn -p 3306 target > mysql // grep -B 5 open mysql
+netdiscover -r x.x.x.1/24
+```
+## nmap
+```console
+nmap -sP x.x.x.1/24                 
+nmap -sn x.x.x.1/24
+nmap -p 389 -T4 -A -v --script ldap-rootdse nnn.nnn.nnn.nnn/nn
+nmap --script ftp-brute -p 21 <host>
+Nmap -Pn -p 3389 target > rdp  // grep -B 5 open rdp
+Nmap -Pn -p 3306 target > mysql // grep -B 5 open mysql
 ```
 
 ==== Crack SMB credentials ====
