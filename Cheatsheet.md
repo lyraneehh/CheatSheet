@@ -2,12 +2,14 @@
 
   
 ## Netdiscover
-<details>
-  <summary>Netdiscover </summary>
+
+  
 ```console
 netdiscover -r x.x.x.1/24
 ```
+  
 </details>
+
 ## Nmap
 ```console
 nmap -sP x.x.x.1/24                 
