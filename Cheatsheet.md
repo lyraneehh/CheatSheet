@@ -1,4 +1,8 @@
-Reference: https://github.com/DarkLycn1976/CEH-Practical-Notes-and-Tools
+Reference: 
+https://github.com/DarkLycn1976/CEH-Practical-Notes-and-Tools
+https://github.com/hunterxxx/CEH-v12-Practical
+https://medium.com/@abdulmajidjamil/ceh-practical-lpt-master-ctf-notes-in-general-d0cb7007dacd
+https://immpetus.gitbook.io/ceh-practical/nmap-tool
 
 # Scanning
 
@@ -276,6 +280,16 @@ admin'/*
 
 
 # CUSTOM WORDLIST 
+
+<details>
+<summary>Cewl</summary>
+  
+* cewl is the tool, example.com is the site, -m is to specify the minimum length of the word , -w is to specify the output file
+  
+```console
+cewl example.com -m 5 -w words.txt
+```
+</details>
 
 
 
