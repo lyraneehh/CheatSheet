@@ -1,16 +1,22 @@
 # Scanning
 
   
-## Netdiscover
-
+<details>
+  <summary>Netdiscover</summary>]
+  
+## Netdiscover 
   
 ```console
+netdiscover -i eth0
 netdiscover -r x.x.x.1/24
 ```
-  
-</details>
+ </details> 
 
+<details>
+  <summary>Netdiscover</summary>
+  
 ## Nmap
+
 ```console
 nmap -sP x.x.x.1/24                 
 nmap -sn x.x.x.1/24
@@ -20,15 +26,15 @@ Nmap -Pn -p 3389 target > rdp  // grep -B 5 open rdp
 Nmap -Pn -p 3306 target > mysql // grep -B 5 open mysql
 ```
 
-# Credentials SMB Cracking
+# SMB Credentials Cracking
 
-## Hydra
+## SMB Cracking with Hydra
 
 ```console
 hydra -L /root/Desktop/user.txt -P /root/Desktop/pass.txt 192.168.1.118 smb
 ```
 
-## Metasploit
+## SMB Cracking with Metasploit
 
 ```console
 For Cracking SMB Password:
