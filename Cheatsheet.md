@@ -1,5 +1,7 @@
-# * Scanning
-
+# Scanning
+<details>
+  <summary>Netdiscover </summary>
+  
 ## Netdiscover
 ```console
 netdiscover -r x.x.x.1/24
