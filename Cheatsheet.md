@@ -164,6 +164,6 @@ adb pull sdcard/log.txt /home/mmurphy/Desktop
 
 == resources ==
 
-https://github.com/nirangadh/ceh-practical/blob/main/module03-Scanning-Networks.txt
-*https://github.com/Samson-DVS/CEH-Practical-Notes/tree/main
+* https://github.com/nirangadh/ceh-practical/blob/main/module03-Scanning-Networks.txt
+* https://github.com/Samson-DVS/CEH-Practical-Notes/tree/main
 
