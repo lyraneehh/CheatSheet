@@ -1,4 +1,4 @@
-# Scanning
+# * Scanning
 
 ## Netdiscover
 ```console
