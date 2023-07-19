@@ -71,9 +71,10 @@ gobuster -e -u http://10.10.10.10 -w wordlsit.txt
 
 <details>
   <summary>Dirb</summary>
-  
+
+Look for subdirectories
 ```shell
-dirb http://10.10.10.10 wordlist.txt
+gobuster vhost -v -w /home/username/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u http://workers.htb -o vhosts.txt
 ```
 </details>
 
