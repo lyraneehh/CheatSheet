@@ -6,12 +6,8 @@ https://immpetus.gitbook.io/ceh-practical/nmap-tool
 
 # Scanning
 
-  
 <details>
   <summary>Netdiscover</summary>
-
-
-
 
 
 ## Netdiscover 
@@ -20,7 +16,7 @@ https://immpetus.gitbook.io/ceh-practical/nmap-tool
 netdiscover -i eth0
 netdiscover -r x.x.x.1/24
 ```
- </details> 
+</details>
 
 <details>
   <summary>Nmap</summary>
@@ -159,7 +155,7 @@ Hashcat
  <summary>Password Cracking - WIFI Encryption </summary>
 
 ```console
-aircrack-ng -w rockyou.txt capture-01.cap
+aircrack-ng pcap.cap -w /usr/share/wordlists/rockyou.txt
 ```
 
 </details>
