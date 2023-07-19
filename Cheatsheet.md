@@ -160,10 +160,6 @@ aircrack-ng pcap.cap -w /usr/share/wordlists/rockyou.txt
 
 </details>
 
-
-
-
-
 # Vulnerability Scanning 
 
 <details>
@@ -315,6 +311,25 @@ sqlmap -u 'url' --dbms=mysql --os-shell SQL Shell = sqlmap -u 'url' --dbms=mysql
 
 # VERACRYPT 
 
+<details>
+ <summary> Bruteforce Veracrypt Encryption using hashcat </summary>
+
+```console
+Download hashcat binary: https://hashcat.net/hashcat/
+Download 7zip to extract: https://www.7-zip.org/
+```
+> hashcat.exe --help
+> 
+> look for Veracrypt encryption, select option
+> hashcat.exe -a 3 -w 1 -m 13721 ..\<file_path>\<hash> ?d?d?d?d
+
+> https://github.com/frizb/Hashcat-Cheatsheet
+
+
+</details>
+
+
+
 
 # CUSTOM WORDLIST 
 
@@ -391,6 +406,7 @@ sdcard/Download/secret.txt
 ```  
 </details>
 
+# 
 
 
 
