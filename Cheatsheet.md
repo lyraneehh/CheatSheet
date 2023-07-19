@@ -67,18 +67,14 @@ nmap -Pn -A x.x.x.1/24 -vv --open
 ```shell
 gobuster -e -u http://10.10.10.10 -w wordlsit.txt
 ```
-</details>
 
-<details>
-  <summary>Dirb</summary>
-
-Look for subdirectories
 ```shell
 gobuster vhost -v -w /home/username/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u http://workers.htb -o vhosts.txt --append-domain
 
 > if you don't "--append-domain", you might not find anything
 ```
 </details>
+
 
 
 # Credential / Password Attacks
