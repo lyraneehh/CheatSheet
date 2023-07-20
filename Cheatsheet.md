@@ -56,18 +56,33 @@ nmap -Pn -A x.x.x.1/24 -vv --open
 
 </details>
 
-# If have web service, try enumerate:
+# If web service detected:
 <details>
-  <summary>Gobuster</summary>
+ 
+  <summary>Enumerate:</summary>
+
+Gobuster
   
 ```shell
 gobuster -e -u http://10.10.10.10 -w wordlsit.txt
 ```
+If have subdomain: 
 
 ```shell
 gobuster vhost -v -w /home/username/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u http://workers.htb -o vhosts.txt --append-domain
 
-> if you don't "--append-domain", you might not find anything
+• if you don't "--append-domain", you might not find anything
+```
+</details>
+
+
+<details>
+<summary>
+Find out if have wordPress:</summary>
+  
+```shell
+Download Web plugin/extension: Wappalyzer:
+https://www.wappalyzer.com/apps/
 ```
 </details>
 
@@ -305,6 +320,16 @@ sqlmap -u 'url' --dbms=mysql --os-shell SQL Shell = sqlmap -u 'url' --dbms=mysql
 </details>
 </details>
 
+
+# Hidden text in image
+
+<details>
+  <summary> Snow </summary>
+```console
+  SNOW.EXE -C -p test hide.txt
+```
+
+</details>
 
 
 
