@@ -1,8 +1,11 @@
 Reference: 
-https://github.com/DarkLycn1976/CEH-Practical-Notes-and-Tools
-https://github.com/hunterxxx/CEH-v12-Practical
-https://medium.com/@abdulmajidjamil/ceh-practical-lpt-master-ctf-notes-in-general-d0cb7007dacd
-https://immpetus.gitbook.io/ceh-practical/nmap-tool
+>https://github.com/DarkLycn1976/CEH-Practical-Notes-and-Tools
+>https://github.com/hunterxxx/CEH-v12-Practical
+>https://medium.com/@abdulmajidjamil/ceh-practical-lpt-master-ctf-notes-in-general-d0cb7007dacd
+>https://immpetus.gitbook.io/ceh-practical/nmap-tool
+>https://github.com/nirangadh/ceh-practical/blob/main/module03-Scanning-Networks.txt
+>https://github.com/Samson-DVS/CEH-Practical-Notes/tree/main
+>https://emn178.github.io/online-tools/
 
 # Scanning
 
@@ -437,6 +440,5 @@ sdcard/Download/secret.txt
 
 # resources 
 
-* https://github.com/nirangadh/ceh-practical/blob/main/module03-Scanning-Networks.txt
-* https://github.com/Samson-DVS/CEH-Practical-Notes/tree/main
+
 
